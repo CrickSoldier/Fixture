@@ -8,6 +8,7 @@ BoundingRectItem::BoundingRectItem()
     _transformMode = false;
     _width         = 0;
     _height        = 0;
+    setAcceptHoverEvents(true);
 }
 
 void BoundingRectItem::setPoints(QPointF min, QPointF max)
@@ -113,3 +114,21 @@ BoundingRectItem::HotSpot BoundingRectItem::checkMouse(
 
     return BoundingRectItem::HotSpot::Move;
 } // BoundingRectItem::checkMouse
+
+void BoundingRectItem::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
+{
+    event->accept();
+    qDebug() << "yeah";
+}
+
+void BoundingRectItem::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
+{
+    event->accept();
+    qDebug() << "yeah";
+}
+
+void BoundingRectItem::hoverMoveEvent(QGraphicsSceneHoverEvent *event)
+{
+    event->accept();
+    qDebug() << "yeah";
+}

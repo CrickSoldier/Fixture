@@ -51,6 +51,9 @@ protected:
          QWidget *                       widget);
 
     QRectF boundingRect() const;
+    void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
+    void hoverMoveEvent(QGraphicsSceneHoverEvent *event);
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
 
 private:
     QRectF _boundingRect;
